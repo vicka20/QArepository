@@ -1,0 +1,20 @@
+-- создание таблицы student с 3 полями (id, name, age)
+CREATE TABLE student (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER NOT NULL
+);
+
+-- добавление одной записи (1, Вася, 19)
+INSERT INTO student VALUES (1, 'Вася', 19);
+
+-- обновление одной записи (изменить возраст на 20)
+UPDATE student 
+SET age = 20
+where age = 19;
+
+-- получение студентов с именами, начинающимися на "Ва"
+select * from student where name like 'Ва%';
+
+-- удаление студентов, возраст которых больше 18
+delete from student where age > 18;
